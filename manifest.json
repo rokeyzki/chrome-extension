@@ -1,0 +1,37 @@
+{  
+    "name": "我的第一个插件",  //插件的名称
+    "version": "0.1.0", //扩展的版本
+    "icons": 
+    { 
+      "16": "assets/images/icon_16.png",             
+      "48": "assets/images/icon_48.png",            
+      "128": "assets/images/icon_128.png" 
+    }, 
+    "manifest_version": 2, //这个是必须的，并且值为2
+    "description": "Chrome扩展demo",  //扩展的基本描述
+    "browser_action": {  
+        "default_icon": "assets/images/icon_64.png" , //插件图标icon位置
+        "default_title": "默认标题", //鼠标hover是的标题
+        "default_popup": "popup.html" //单击图标popup出来的面板
+    },
+    "permissions":[
+        "tabs",  "notifications"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://www.baidu.com/"],
+            "js": ["assets/scripts/base.js", "assets/scripts/baidu.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["*://item.jd.com/*.html"],
+            "js": ["assets/scripts/jd.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["*://www.amazon.com/AmazonBasics-3-Button-Wired-Mouse-Black/dp/B005EJH6RW/ref=sr_1_4?s=pc&srs=10112675011&ie=UTF8&qid=1503816804&sr=1-4"],
+            "js": ["assets/scripts/angular.js", "assets/scripts/amazon.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
