@@ -27,6 +27,14 @@
             "run_at": "document_idle"
         },
         {
+            "matches": ["*://www.google.com/"],
+            "js": [
+                "assets/scripts/base.js", 
+                "assets/scripts/google.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
             "matches": ["*://item.jd.com/*.html"],
             "js": ["assets/scripts/jd.js"],
             "run_at": "document_end"
