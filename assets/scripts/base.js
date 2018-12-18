@@ -1,2 +1,2 @@
-console.clear()
-console.info('chrome 插件')
+console.clear();
+console.info('chrome 插件');

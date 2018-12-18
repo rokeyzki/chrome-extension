@@ -27,9 +27,8 @@
             "run_at": "document_idle"
         },
         {
-            "matches": ["*://www.google.com/"],
+            "matches": ["*://www.google.com/*"],
             "js": [
-                "assets/scripts/base.js", 
                 "assets/scripts/google.js"
             ],
             "run_at": "document_idle"
