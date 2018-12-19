@@ -1,0 +1,11 @@
+.childBox {
+  display: inline-block;
+  padding: 20px;
+  border: dotted #e3e3e3 1px;
+  margin-top: 20px;
+
+  .formItem {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+}
