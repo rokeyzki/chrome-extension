@@ -1,7 +1,7 @@
 console.log('baidu 插件');
-var baiduInput = document.getElementById('kw');
+var baiduInput = document.querySelector('#kw');
 // baiduInput.value = '123';
-var baiduSubmit = document.getElementById('su');
+var baiduSubmit = document.querySelector('#su');
 // baiduSubmit.click();
 
 baiduSubmit.insertAdjacentHTML('afterend', '<div class="zg-chrome-extension-box"></div>');

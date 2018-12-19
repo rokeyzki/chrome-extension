@@ -9,6 +9,16 @@ import './styles/overwrite.less';
 
 const rootStore = new RootStore();
 
+console.log('react', document);
+window.parent.postMessage('这是一条来自iframe传递给parent的通信', '*');
+
+// 通信监听
+window.addEventListener('message', (event) => {
+  if (event.data && (event.source === window.parent)) {
+    console.log(event, event.data);
+  }
+});
+
 ReactDOM.render(
   <div>
     <Provider {...rootStore}>

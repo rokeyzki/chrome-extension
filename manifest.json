@@ -22,7 +22,8 @@
             "matches": ["*://www.baidu.com/*"],
             "js": [
                 "assets/scripts/base.js", 
-                "assets/scripts/baidu.js"
+                "assets/scripts/baidu.js",
+                "assets/scripts/iframe.js"
             ],
             "run_at": "document_idle"
         },
