@@ -36,6 +36,6 @@ function addBaiduBtn(input) {
         baiduSubmitStyle.color = '#757575';
     });
     baiduSubmit.addEventListener('click', function() {
-        window.open('https://www.baidu.com/s?wd=' + googleInput.value, '_self');
+        window.open('https://www.baidu.com/s?wd=' + googleInput.value + '&foo=112233', '_self');
     });
 }

@@ -32,3 +32,14 @@ baiduInput.addEventListener('input', function(e) {
   if (baiduInput.value && baiduInput.value.trim() !== '') extensionStyle.display = 'block';
   else extensionStyle.display = 'none';
 });
+
+console.log(window.location);
+var foo = getQueryString('foo');
+if (foo && foo.trim() !== '') console.log('foo:', getQueryString('foo'));
+
+// 获取URL get 参数
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) return unescape(r[2]); return null;
+}

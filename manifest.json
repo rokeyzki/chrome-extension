@@ -19,7 +19,7 @@
     ],
     "content_scripts": [
         {
-            "matches": ["*://www.baidu.com/"],
+            "matches": ["*://www.baidu.com/*"],
             "js": [
                 "assets/scripts/base.js", 
                 "assets/scripts/baidu.js"
